@@ -1,0 +1,400 @@
+body {
+  font-family: "Roboto", sans-serif;
+
+}
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+@keyframes stripe-slide {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    background-color: #eee;
+    background-image: url('http://i.cubeupload.com/NjsJx8.png');
+    margin: 0;
+}
+
+.btn {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+
+    line-height: normal;
+    cursor: pointer;
+    -moz-user-select: text;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 16px 36px 22px;
+    background-color: #FFFC00;
+    color: #fff;
+    border: 1px dot-dash #FFFC00;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    transition: all 0.5s ease;
+    background: linear-gradient(45deg, #2c4b65 30%, #467392 90%);
+    boxShadow: 0 3px 5px 2px rgba(255, 255, 255, .93);
+    font: normal normal 400 normal 22px / normal Oswald, sans-serif;
+
+
+}
+.btn:-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+.btn--stripe {
+    overflow: hidden;
+    position: relative;
+}
+.btn--stripe:after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-image: repeating-linear-gradient(45deg, #fff, #ffe57f 1px, transparent 2px, transparent 5px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-top: 1px solid #467392;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: 7px 7px;
+}
+.btn--stripe:hover {
+    background-color: #fff;
+    color: #FFFC00;
+    border-color: #fff;
+}
+.btn:active {
+    /*top: 108px;*/
+    box-shadow: 0px 7px 0px 0px #FFFC00;
+}
+
+.btn--stripe:hover:after {
+    background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+    border-top: 1px solid #fff;
+    animation: stripe-slide 19s infinite linear forwards;
+}
+.btn--large {
+    width: 50%;
+}
+.btn--radius {
+    border-radius: 36px;
+}
+
+#DIV_1:after {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(4, 27, 81);
+    content: '""';
+    display: block;
+    height: 80px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    text-align: left;
+    text-decoration: none solid rgb(4, 27, 81);
+    text-size-adjust: 100%;
+    top: 542px;
+    width: 493.333px;
+    z-index: 10;
+    column-rule-color: rgb(4, 27, 81);
+    perspective-origin: 246.667px 40px;
+    transform-origin: 246.667px 40px;
+    caret-color: rgb(4, 27, 81);
+    border-top: 80px solid rgba(0, 0, 0, 0);
+    border-right: 493.333px solid rgb(250, 250, 250);
+    border-bottom: 0px solid rgba(0, 0, 0, 0);
+    border-left: 0px solid rgba(0, 0, 0, 0);
+    font: normal normal 400 normal 14px / 21px gilroy, sans-serif;
+    margin: -80px 0px 0px;
+    outline: rgb(4, 27, 81) none 0px;
+}/*#DIV_1:after*/
+.container {
+  width: 350px;
+  min-width: 350px;
+
+  margin: 0px auto;
+  margin-left:-13px;
+}
+
+.card {
+  border-radius: 1px;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 1px rgba(255,0,0,0.6);
+}
+
+.card-head {
+  position: relative;
+  height: 80px;
+  background-color: #fff;
+  background-image: linear-gradient(315deg, #ffffec 0%, #ffffec 74%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#fa782e", endColorstr="#c6b09a", GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius: 3px 3px 0 0;
+}
+
+.card-logo {
+  width: 175px;
+  margin: 10px;
+}
+
+.product-img {
+  position: absolute;
+  left: 0;
+  margin-top: -20px;
+  margin-left: 0px;
+}
+
+.product-detail {
+  padding: 0 0px 0px;
+  font-size: 11px;
+  color: #fff;
+}
+
+.product-detail h2 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.back-text {
+  display: inline-block;
+  font-size: 125px;
+  font-weight: 900;
+  margin-left: -7px;
+  margin-top: -12px;
+  opacity: 0.1;
+}
+
+.card-body {
+  height: 200px;
+  background: #fff;
+  border-radius: 0 0 1px 1px;
+}
+
+.product-title {
+  padding: 20px 20px 5px 20px;
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.product-title b {
+  font-weight: 900;
+  letter-spacing: 0px;
+}
+
+.badge {
+  position: relative;
+  font-size: 10px;
+  font-weight: 300;
+  color: #fff;
+  background: #c6b09a;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -2px;
+  margin-left: 5px;
+}
+
+.product-caption {
+  display: block;
+  padding: 0 20px;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.product-rating {
+  padding: 0 20px;
+  font-size: 11px;
+}
+
+.product-rating i.grey {
+  color: #acacab;
+}
+
+.product-size h4 {
+  font-size: 11px;
+  padding: 0 21px;
+  margin-top: 15px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.ul-size {
+  margin-left: 15px;
+}
+
+.ul-size li {
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+}
+
+.ul-size li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 11px;
+  width: 23px;
+  height: 23px;
+  border-radius: 100%;
+  text-align: left;
+  line-height: 23px;
+  color: #000;
+}
+
+.ul-size li a.active {
+  background: #f35e3d;
+  color: #fff;
+}
+
+.ul-size li a.buy {
+  background: #11e95b;
+  color: #fff;
+}
+
+.product-size:before,
+.product-size:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.product-color h4 {
+  font-size: 11px;
+  padding: 0 21px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.ul-color {
+  margin-left: 7px;
+}
+
+.ul-color li {
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+}
+
+.ul-color li a {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+}
+
+.ul-color li a.orange {
+  background: #f35e3d;
+}
+
+.ul-color li a.green {
+  background: #11e95b;
+}
+
+.ul-color li a.yellow {
+  background: #ffd414;
+}
+
+.ul-color li a.active:after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border: 1px solid #f35e3d;
+
+  border-radius: 100%;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+
+.product-price {
+  position: absolute;
+  background: #2c4b65;
+  padding: 7px 20px;
+  text-align: left;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 200;
+  color: #fff;
+  border-radius: 1px;
+  margin-top: -13px;
+  margin-left: 10px;
+
+}
+
+.product-price b {
+  margin-left: 5px;
+}
+
+.yt {
+  position: fixed;
+  padding: 7px 10px 3px 10px;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.yt:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+body { margin:5 0 auto; padding-top:15px; width:500px;}
+
+/* CSS for Credit Card Payment form */
+.credit-card-box .panel-title {
+    display: inlinace;
+    font-weight: bold;
+}
+.credit-card-box .form-control.error {
+    border-color: red;
+    outline: 0;
+	padding:0px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 1px rgba(255,0,0,0.6);
+}
+.credit-card-box label.error {
+  font-weight: bold;
+  color: red;
+
+  margin-top:5px;
+}
+.credit-card-box .payment-errors {
+  font-weight: bold;
+  color: red;
+  padding: 5px 8px;
+  margin-top: 5px;
+}
+.credit-card-box label {
+    display: block;
+}
+/* The old "center div vertically" hack */
+.credit-card-box .display-table {
+    display: table;
+}
+.credit-card-box .display-tr {
+    display: table-row;
+}
+.credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: left;
+    width: 50%;
+}
+/* Just looks nicer */
+.credit-card-box .panel-heading img {
+    min-width: 170px;
+}
