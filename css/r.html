@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Natural Language Form 2</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,500,900'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      *, *:before, *:after {
+  box-sizing: border-box;
+  transition: .25s ease-in-out;
+}
+
+*::selection {
+  background: #ff202f;
+  color: white;
+}
+
+body {
+  background-color: #04b8ad;
+}
+
+form {
+  max-width: 100%;
+  margin: 100px auto 0 auto;
+  font-family: roboto;
+  font-weight: 200;
+  font-size: 40px;
+  line-height: 60px;
+  color: white;
+}
+form .input-container {
+  border-bottom: 1px dashed #007a73;
+  color: #007a73;
+  padding: 6px;
+  margin-left: -6px;
+  margin-right: -6px;
+  display: inline-block;
+  position: relative;
+}
+form .input-container.no-overflow {
+  max-width: 100%;
+}
+form .input-container.no-overflow .input {
+  max-width: 100%;
+}
+form .input-container.no-overflow .input input {
+  max-width: 100%;
+}
+form .input-container:hover {
+  border-bottom: 1px dashed #004f4a;
+  color: #004f4a;
+  cursor: pointer;
+}
+form .input-container.active {
+  z-index: 5000;
+  border-bottom: 1px dashed #004f4a;
+  color: #004f4a;
+  cursor: default;
+}
+form .input-container.active:before {
+  content: '';
+  display: block;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+form .input-container.active .input {
+  visibility: visible;
+  opacity: 1;
+}
+form .input-container .newOption {
+  padding: 6px 6px 6px 6px;
+  background: white;
+  position: relative;
+  white-space: nowrap;
+}
+form .input-container .newOption:hover {
+  background: #ff202f;
+  color: white;
+}
+form .input-container .newOption:hover:after {
+  color: white !important;
+}
+form .input-container .newOption.selected:after {
+  content: '\f00c';
+  font-family: FontAwesome;
+  color: #ff202f;
+  display: block;
+  top: 0;
+  right: 0;
+  height: 72px;
+  width: 46px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 72px;
+  position: absolute;
+}
+form .input-container .placeholder {
+  position: relative;
+  z-index: 1;
+}
+form .input-container .input {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+form input[type="text"], form select[type="text"] {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 6px;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 60px;
+  display: block;
+}
+form input.hidden, form select.hidden {
+  position: absolute;
+  left: -5000px;
+}
+form button {
+  display: block;
+  background: white;
+  border: none;
+  padding: 10px 55px 10px 20px;
+  font-size: 30px;
+  font-weight: 200;
+  margin: 30px 0 0 0;
+  box-shadow: inset 0px 0px 0px #ff202f;
+  position: relative;
+}
+form button i {
+  transition: 0s 0s ease-in-out;
+}
+form button:after {
+  content: '\f105';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 55px;
+  width: 55px;
+  font-family: FontAwesome;
+  line-height: 55px;
+  text-align: center;
+  color: #ff202f;
+}
+form button:hover {
+  box-shadow: inset 350px 0 0 #ff202f;
+  color: white;
+  cursor: pointer;
+}
+form button:hover:after {
+  color: white;
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <form id="form" method="get" target="_blank">
+  If I make a
+  <span id="atmosphere" class="input-container">
+    <span class="placeholder">$200</span>
+  <span class="input selectbox">
+      <select class="fancy-select hidden" name="find_desc">
+        <option selected="selected" value="500">$500</option>
+        <option value="1000">$1000</option>
+        <option value="5000">$5000</option>
+    
+      </select>
+    </span>
+  </span>
+  inventment today. <br> then a
+  <span id="atmosphere" class="input-container">
+    <span class="placeholder">$200</span>
+  <span class="input selectbox">
+      <select class="fancy-select hidden" name="find_desc">
+        <option selected="selected" value="500">$500</option>
+        <option value="1000">$1000</option>
+        <option value="5000">$5000</option>
+    
+      </select>
+    </span>
+  </span>
+  investment per month<br> how are we looking after <span id="atmosphere" class="input-container">
+    <span class="placeholder">5</span>
+  <span class="input selectbox">
+      <select class="fancy-select hidden" name="find_desc">
+        <option selected="selected" value="5">5</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+    <option value="10000">10K</option>
+      </select>
+    </span>
+  </span> years
+  <button stype="float:left" type="submit">Compare now</button>
+</form>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
