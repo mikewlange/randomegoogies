@@ -28,7 +28,7 @@ lg.to(logo, 1, {
   autoAlpha:1,
   scale:1,
   ease:Bounce.easeOut,
-  transformOrigin:"50% 50%"
+  transformOrigin:"0% 0%"
 })
 
 TweenMax.set(morph, {
@@ -45,14 +45,14 @@ hero
 .to(fgMtnPeak, 0.5, {
   xPercent: 23.6
 },'+=.1')
-.to(copy, 0.2, {
-  className:'-=animated',
-  autoAlpha:0,
-  css:{
-    top:'-1000px'
-  }
-})
-.to(bgMtn, .5, {
+// .to(copy, 0.2, {
+//   className:'-=animated',
+//   autoAlpha:0,
+//   css:{
+//     top:'-1000px'
+//   }
+// })
+// .to(bgMtn, .5, {
   xPercent: -23.6
 },'-=.65')
 .to(morph, 0.5, {
@@ -60,16 +60,16 @@ hero
   scale:1,
   transformOrigin:"center bottom"
 }, "-=1")
-.to(mobile, .5, {
-  autoAlpha:1,
-  morphSVG:"#mobile"
-}, "+=.5")
-.to(mobile, .5, {
-  morphSVG:"#tablet"
-}, "+=.5")
-.to(mobile, .5, {
-  morphSVG:"#desktop"
-}, "+=.5")
+// .to(mobile, .5, {
+//   autoAlpha:1,
+//   morphSVG:"#mobile"
+// }, "+=.5")
+// .to(mobile, .5, {
+//   morphSVG:"#tablet"
+// }, "+=.5")
+// .to(mobile, .5, {
+//   morphSVG:"#desktop"
+// }, "+=.5")
 .to(close, .3, {
   autoAlpha:1,
   yPercent: 0
